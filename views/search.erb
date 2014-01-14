@@ -1,0 +1,18 @@
+
+
+<a href="http://en.wikipedia.org/wiki/<%= page["page_title"] %>"><%= page["page_title"] %></a>
+
+<p>Translations</p>
+<ul>
+<% languages.each do |language| %>
+	<li><a href="http://<%= language["ll_lang"] %>.wikipedia.org/wiki/<%= language["ll_title"] %>"><%= language["ll_lang"]%></a></li>
+<% end %>
+</ul>
+
+
+<p>Categories</p>
+<ul>
+<% categories.each do |category| %>
+  <li><a href="http://en.wikipedia.org/wiki/Category:<%= category["page_title"] %>"><%= category["page_title"] %></a></li>
+<% end %>
+</ul>
